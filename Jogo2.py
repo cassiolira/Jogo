@@ -4,7 +4,7 @@ print('***************************')
 5
 
 numero_secreto = 42
-rodadas = 1
+
 
 tentativas_str = input('How many attempts do you want?')
 print('You chose:', tentativas_str)
@@ -14,7 +14,7 @@ print('You will have', tentativas_str, 'chances!')
 tentativas_int = int(tentativas_str)
 
 # Início do código do jogo.
-while (tentativas_int >= rodadas):
+for rodadas in range(1,tentativas_int):
     print('Try', rodadas, 'of', tentativas_int)
     chute_str = input('Enter your number:')
     print('You typed:: ', chute_str)
@@ -24,13 +24,12 @@ while (tentativas_int >= rodadas):
 
     if (numero_secreto == chute_int):
             print('Congratulation! You got it!')
-            tentativas_int = 0
+            break
     else:
         if (numero_secreto < chute_int):
             print('You lose! Your number is bigger than the secret number!')
         if (numero_secreto > chute_int):
             print('You lose! Your number is smaller than the secret number!')
 
-    rodadas = rodadas + 1
 
 print('End of game!')
