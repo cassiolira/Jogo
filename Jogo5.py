@@ -12,18 +12,16 @@ numero_secreto = int(rd.random()*100)
 
 level_str = input('Please, select your level: Type (1) for Easy, (2) for Normal or (3) for Master Level')
 level = int(level_str)
+
 if (level == 1):
     print('You selected te Easy Level')
     tentativas = 12
 elif (level == 2):
     print('You selected te Normal Level')
     tentativas = 8
-elif (level == 3):
+else:
     print('You selected te Master Level')
     tentativas = 5
-else:
-    print('Wrong number!')
-
 
 # Início do código do jogo.
 for rodadas in range(1, tentativas + 1):
