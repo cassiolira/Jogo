@@ -1,7 +1,7 @@
 print('Welcome to Guess What? Game')
 print('***************************')
 print('***************************')
-5
+
 
 numero_secreto = 42
 rodadas = 1
