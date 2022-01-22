@@ -1,15 +1,23 @@
 def jogar():
-    print('****Punch Game!****')
 
+    print('****Forca Game!****')
 
-    vida = input('Type the life of the Monster:')
-    vida_int = int(vida)
-    forca = input('Type your Punch Power:')
-    forca_int = int(forca)
-    turno = (vida_int/forca_int)
-    print('The monster will die with ', turno, 'punch!')
+    palavra_secreta = 'Python'
 
-#Serve para definir se o programa foi rodado pelo menu ou se foi utilizado
-#forma direta.
-if(__name__ == __main__):
+    enforcou = False
+    acertou = False
+
+    while (not enforcou and not acertou):
+        chute = input('Qual letra você deseja chutar?')
+        index = 1
+        for letra in palavra_secreta:
+            if (chute==letra):
+                print('Você advinhou a letra:',chute,'na posição', index)
+            index = index + 1
+        print('Continue jogando...')
+
+    print('Final do Jogo!')
+    #Serve para definir se o programa foi rodado pelo menu ou se foi utilizado
+    #forma direta.
+if(__name__ == '__main__'):
     jogar()
